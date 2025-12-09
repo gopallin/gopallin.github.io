@@ -1,4 +1,4 @@
-baseURL = "https://gopallin.com/"
+baseURL = "https://gopallin.github.io/"
 languageCode = "zh-tw"
 title = "a litte more"
 theme = "github-style"
