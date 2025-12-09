@@ -1,0 +1,48 @@
+baseURL = "https://gopallin.com/"
+languageCode = "zh-tw"
+title = "a litte more"
+theme = "github-style"
+pygmentsCodeFences = true
+pygmentsUseClasses = true
+
+[params]
+  author = "Gopal"
+  description = "A litter more every day."
+  github = "gopallin"
+  email = "btoeww1993@gmail.com"
+  url = "https://github.com/gopallin"
+  favicon = "/images/github-mark.png"
+  avatar = "/images/avatar.png"
+  headerIcon = "/images/github-mark-white.png"
+  location = "Tawian"
+  userStatusEmoji = "😬"
+  enableGitalk = true
+  enableSearch = true
+
+  [params.gitalk]
+    clientID = "Your client ID"
+    clientSecret = "Your client secret" # Your client secret
+    repo = "LuvSia"
+    owner = "ventusoon"
+    admin = "ventusoon"
+    id = "location.pathname"
+    labels = "gitalk"
+    perPage = 15
+    pagerDirection = "last"
+    createIssueManually = true
+    distractionFreeMode = false
+    proxy = "https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token" # 可以自行添加反向代理
+  [[params.links]]
+    title = "Link"
+    href = "https://github.com/meik2333"
+  [[params.links]]
+    title = "Link2"
+    href = "https://meik2333.com"
+    icon = "https://meik2333.com/images/avatar.png"
+
+[frontmatter]
+  lastmod = ["lastmod", ":fileModTime", ":default"]
+
+[services]
+  [services.googleAnalytics]
+    # ID = "UA-123456-789"
