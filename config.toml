@@ -1,6 +1,6 @@
 baseURL = "https://gopallin.github.io/"
 languageCode = "zh-tw"
-title = "a litte more"
+title = "A Litte More Every Day"
 theme = "github-style"
 pygmentsCodeFences = true
 pygmentsUseClasses = true
