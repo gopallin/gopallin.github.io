@@ -18,4 +18,10 @@ draft = false
 
 因為 Neovim [官方文件 Quick Start](https://neovim.io/doc/build/) 已經有非常簡單明瞭的步驟了，這裡就不再贅述了，僅僅想跟大家分享我的配置
 
-歡迎上我的 [github](https://github.com/gopallin/nvim) 如果有什麼覺得需要改善的地方，歡迎提出來一起討論，讓我們一起進步。 
+---
+
+[Neovim Lazy.vim - So Lazy Me!]({{< ref "post/nvim_lazy.md" >}})
+施工中... 
+
+---
+歡迎上我的 [github](https://github.com/gopallin/nvim) 以瀏覽更多。如果覺得有什麼可以改善的地方，歡迎提出來一起討論，讓我們一起進步！ 

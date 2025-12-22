@@ -6,7 +6,7 @@ pygmentsCodeFences = true
 pygmentsUseClasses = true
 
 [params]
-  author = "Gopal"
+  author = "雙木林雙先生"
   description = "A litter more every day."
   github = "gopallin"
   email = "btoeww1993@gmail.com"
@@ -39,3 +39,7 @@ pygmentsUseClasses = true
 [services]
   [services.googleAnalytics]
     # ID = "UA-123456-789"
+
+[environments]
+  [environments.development]
+    baseURL = "http://localhost:1313/"
