@@ -5,7 +5,7 @@ author = "Gopal"
 keywords = ["first post", "markdown", "hugo"]
 cover = ""
 summary = "This is a sample blog post to demonstrate Markdown features in Hugo."
-draft = true
+draft = false
 +++
 
 # Template

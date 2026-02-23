@@ -18,10 +18,51 @@ draft = false
 
 因為 Neovim [官方文件 Quick Start](https://neovim.io/doc/build/) 已經有非常簡單明瞭的步驟了，這裡就不再贅述了，僅僅想跟大家分享我的配置
 
+### 檔案結構 
+```
+~/.config/nvim
+├── lua
+│   ├── config
+│   │   ├── autocmds.lua
+│   │   ├── keybindings.lua
+│   │   ├── options.lua
+│   │   └── styles.lua
+│   ├── plugins
+│   │   ├── plugin01.lua
+│   │   └── plugin02.lua
+│   └── utility
+│       ├── utility01.lua
+│       └── utility02.lua
+└── init.lua
+```
+
 ---
 
-[Neovim Lazy.vim - So Lazy Me!]({{< ref "post/nvim_lazy.md" >}})
-施工中... 
+### Settings
+在 `.config/nvim/lua/plugins/lazy.lua`
+
+```
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+
+vim.opt.rtp:prepend(lazypath)
+```
+
+### Plugins 
+
+* [Neovim Lazy.vim - So Lazy Me!]({{< ref "post/nvim_lazy.md" >}}) 
+* [Neovim Terminal - 終端機裡的終端機]({{< ref "post/nvim_terminal.md" >}}) 
 
 ---
+
 歡迎上我的 [github](https://github.com/gopallin/nvim) 以瀏覽更多。如果覺得有什麼可以改善的地方，歡迎提出來一起討論，讓我們一起進步！ 
