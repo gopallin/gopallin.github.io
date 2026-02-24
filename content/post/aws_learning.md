@@ -1,5 +1,5 @@
 +++
-title = "AWS 學習筆記"
+title = "AWS Certified AI Practitioner 備考"
 date = 2025-12-30T12:31:46+08:00
 author = "Gopal"
 keywords = ["aws"]

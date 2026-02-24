@@ -18,8 +18,13 @@ draft = false
 
 因為 Neovim [官方文件 Quick Start](https://neovim.io/doc/build/) 已經有非常簡單明瞭的步驟了，這裡就不再贅述了，僅僅想跟大家分享我的配置
 
-### 檔案結構 
+### 安裝 Neovim
+```bash
+brew install neovim
 ```
+
+### 檔案結構 
+```text
 ~/.config/nvim
 ├── lua
 │   ├── config
@@ -28,6 +33,7 @@ draft = false
 │   │   ├── options.lua
 │   │   └── styles.lua
 │   ├── plugins
+│   │   ├── lazy.lua -- 官方把這放在 ~/.config/nvim/lua/config，但我更將它視為套件，所以我是放這裡
 │   │   ├── plugin01.lua
 │   │   └── plugin02.lua
 │   └── utility
@@ -36,26 +42,42 @@ draft = false
 └── init.lua
 ```
 
----
+### Options 
 
-### Settings
-在 `.config/nvim/lua/plugins/lazy.lua`
+`新增 options.lua 檔案 ，放基本設定的地方`
+```lua
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-```
-local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+vim.g.encoding = "UTF-8"
+vim.o.fileencoding = "UTF-8"
 
-if not vim.loop.fs_stat(lazypath) then
-  vim.fn.system({
-    "git",
-    "clone",
-    "--filter=blob:none",
-    "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
-  })
-end
+vim.opt.shell = "/bin/zsh"
 
-vim.opt.rtp:prepend(lazypath)
+vim.o.tabstop = 2
+vim.bo.tabstop = 2
+vim.o.shiftround = true
+vim.o.shiftwidth = 2
+vim.o.softtabstop = 2
+vim.o.expandtab = true
+
+vim.opt.clipboard = "unnamedplus"
+vim.opt.number = true
+vim.opt.relativenumber = true
+
+vim.o.showtabline = 2 -- Always show the tabline
+
+vim.o.ignorecase = true
+vim.o.smartcase = true
+vim.o.hlsearch = true
+vim.o.incsearch = true
+
+vim.o.cursorline = true
+vim.o.cursorcolumn = true
+
+vim.opt.foldmethod = "indent"
+vim.opt.foldenable = true -- Enable folding
+vim.opt.foldlevel = 99    -- Start with all folds open
 ```
 
 ### Plugins 
