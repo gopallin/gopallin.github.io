@@ -8,14 +8,11 @@ summary = "終端機裡的終端機"
 draft = false
 +++
 
-系列文章
-* [Neovim Overview 首次安裝及設定]({{< ref "post/nvim_overview.md" >}}) 
-* [Neovim Lazy.vim - So Lazy Me!]({{< ref "post/nvim_lazy.md" >}}) 
-* [Neovim Terminal - 終端機裡的終端機]({{< ref "post/nvim_terminal.md" >}}) <- 現在位置
+{{< nvim_series >}}
 
 ---
 
-![Placeholder Image](/images/lazy-terminal.gif "Terminal in Neovim")
+![Placeholder Image](/images/nvim-terminal.gif)
 
 是的，你沒有看錯!當我用終端機開啟 Neovim 時，就像 VScode 一樣，我也可以再開一個終端機下指令。有時候要下指令跑測試時，可以一鍵開關終端機真的好好用!
 
@@ -27,6 +24,7 @@ mkdir ~/.config/nvim/lua/utility/terminal.lua
 ```
 
 ```lua
+-- ~/.config/nvim/lua/utility/terminal.lua
 local function open_new_terminal()
   -- Capture the current file buffer/window if it’s a "real" file.
   local cur_buf = vim.api.nvim_get_current_buf()
@@ -133,15 +131,23 @@ mkdir ~/.config/nvim/lua/config/keybindings.lua
 ```
 
 ```lua
+-- ~/.config/nvim/lua/config/keybindings.lua
 local terminal = require('utility.terminal')
 
 map("n", "t", terminal.open_terminal)
+```
+
+`修改 init.lua 檔案`
+```lua
+-- ~/.config/nvim/lua/init.lua
+load_files('config', {
+  'options',
+  'keybindings', -- 新增這一行
+})
 ```
 
 好了!現在按空白鍵 + t 應該就可以呼叫終端機出現，來試試看吧😆
 
 ---
 
-歡迎上我的 [GitHub](https://github.com/gopallin/nvim) 瀏覽更多我的配置與相關筆記。如果您有任何建議或想法，也歡迎提出來一起討論，讓我們共同學習與進步！
-
-*(本文經 AI 潤飾)*
+{{< post_footer >}}

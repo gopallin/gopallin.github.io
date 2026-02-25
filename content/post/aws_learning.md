@@ -45,6 +45,4 @@ draft = false
 
 ---
 
-歡迎瀏覽我的 [GitHub](https://github.com/gopallin/nvim) 以獲取更多資訊。如果你對文章內容有任何可以改善的建議，也歡迎提出來一起討論，讓我們共同進步！
-
-*(本文經 AI 潤飾)*
+{{< post_footer >}}

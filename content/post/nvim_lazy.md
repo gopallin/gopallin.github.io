@@ -8,10 +8,7 @@ summary = "So Lazy Me!"
 draft = false
 +++
 
-系列文章
-* [Neovim Overview 首次安裝及設定]({{< ref "post/nvim_overview.md" >}}) 
-* [Neovim Lazy.vim - So Lazy Me!]({{< ref "post/nvim_lazy.md" >}})  <- 現在位置
-* [Neovim Terminal - 終端機裡的終端機]({{< ref "post/nvim_terminal.md" >}})
+{{< nvim_series >}}
 
 ---
 
@@ -22,7 +19,7 @@ draft = false
 
 ---
 
-![Placeholder Image](/images/lazy-vim.gif "Lazy in Neovim")
+![Placeholder Image](/images/nvim-lazy.gif)
 
 ### 插件管理器 `lazy.nvim` 與配置發行版 `LazyVim`
 
@@ -42,17 +39,21 @@ draft = false
 * Git >= 2.19.0
 
 ### 步驟 
-`新增 init.lua 檔案`
-```bash
-mkdir ~/.config/nvim/init.lua
-
+`修改 init.lua 檔案`
+```lua
+-- ~/.config/nvim/lua/init.lua
+load_files('plugins', {
+  'lazy',
+})
 ```
+
 `新增 lazy.lua 檔案，所有 plugins 都會放這裡`
 ```bash
 mkdir ~/.config/nvim/lua/plugins/lazy.lua
 ```
 
 ```lua
+-- ~/.config/nvim/lua/plugins/lazy.lua
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 
 if not vim.loop.fs_stat(lazypath) then
@@ -73,13 +74,10 @@ require("lazy").setup({
     enabled = false,
   },
 })
-
 ```
 
 ---
 
 > 1.  這並非對錯之分。事實上，我目前也處於 Neovim 與 Cursor (搭配 Vim 模式的 IDE) 並用的階段，視不同任務需求靈活切換。
 
-歡迎上我的 [GitHub](https://github.com/gopallin/nvim) 瀏覽更多我的配置與相關筆記。如果您有任何建議或想法，也歡迎提出來一起討論，讓我們共同學習與進步！
-
-*(本文經 AI 潤飾)*
+{{< post_footer >}}

@@ -8,6 +8,8 @@ summary = "Whats Your IDE? Have You Ever Try Neovim"
 draft = false
 +++
 
+{{< nvim_series >}}
+
 ### 因為我是...
 
 * 使用 vim 順手
@@ -16,7 +18,7 @@ draft = false
 
 在看到同事用鍵盤輕輕敲幾個鍵就可以做到我需要用觸控板點好久才能完成的事，直接就冒起了改個編輯器的心。剛好目前也正在研究分離式鍵盤，如果搭配得宜，我相信可以讓開發工作流更順暢！
 
-因為 Neovim [官方文件 Quick Start](https://neovim.io/doc/build/) 已經有非常簡單明瞭的步驟了，這裡就不再贅述了，僅僅想跟大家分享我的配置
+
 
 ### 安裝 Neovim
 ```bash
@@ -44,8 +46,12 @@ brew install neovim
 
 ### Options 
 
-`新增 options.lua 檔案 ，放基本設定的地方`
+`新增 options.lua 檔案，放基本設定的地方`
+```bash
+mkdir ~/.config/nvim/lua/configs/options.lua
+```
 ```lua
+-- ~/.config/nvim/lua/configs/options.lua
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -80,11 +86,24 @@ vim.opt.foldenable = true -- Enable folding
 vim.opt.foldlevel = 99    -- Start with all folds open
 ```
 
-### Plugins 
+`新增 init.lua 檔案`
+```bash
+mkdir ~/.config/nvim/lua/init.lua
+```
 
-* [Neovim Lazy.vim - So Lazy Me!]({{< ref "post/nvim_lazy.md" >}}) 
-* [Neovim Terminal - 終端機裡的終端機]({{< ref "post/nvim_terminal.md" >}}) 
+```lua
+-- ~/.config/nvim/lua/init.lua
+local function load_files(path, files)
+    for _, file in ipairs(files) do
+        require(path .. '.' .. file)
+    end
+end
+
+load_files('config', {
+  'options',
+})
+```
 
 ---
 
-歡迎上我的 [github](https://github.com/gopallin/nvim) 以瀏覽更多。如果覺得有什麼可以改善的地方，歡迎提出來一起討論，讓我們一起進步！ 
+{{< post_footer >}}
