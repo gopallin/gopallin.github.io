@@ -142,6 +142,7 @@ map("n", "t", terminal.open_terminal)
 -- ~/.config/nvim/lua/init.lua
 load_files('config', {
   'options',
+  'styles',
   'keybindings', -- 新增這一行
 })
 ```

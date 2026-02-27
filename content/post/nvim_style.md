@@ -42,7 +42,6 @@ vim.cmd.colorscheme("anysphere")
 -- ~/.config/nvim/lua/init.lua
 load_files('config', {
   'options',
-  'keybindings',
   'styles', -- 新增這一行
 })
 ```
@@ -53,6 +52,10 @@ load_files('config', {
 ```
 
 其實這整個流程也就是使用 Lazy.vim 套件管理之後的安裝過程，未來有其他套件想要安裝也都是用同一流程即可
+
+在系列文章中，在本文以及之前其實就已經介紹了最基礎的 Neovim 檔案結構跟未來想要擴充套件時的做法。當心裡想要或許可以新增些什麼功能時，上 Github 搜尋大多可以找到。如果找到什麼有趣且實用的 plugins，還請不吝分享~
+
+不幸的話，可能找不到已開發的 plugin，這時要不放棄，要不可以自己做，之後我會分享一些自己刻出來的小功能。
 
 ---
 
