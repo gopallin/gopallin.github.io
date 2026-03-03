@@ -4,28 +4,27 @@ date = 2025-12-10T22:11:02+08:00
 author = "Gopal"
 keywords = ["nvim"]
 cover = ""
-summary = "Whats Your IDE? Have You Ever Try Neovim"
+summary = "What's your IDE? Have you tried Neovim?"
 draft = false
 +++
 
 {{< nvim_series >}}
 
-### 因為我是...
+## 為什麼是 Neovim？
 
 * 使用 vim 順手
-* 喜歡簡潔風，對於 IDE 外觀有自己的堅持
-* 覺得一些編輯器 IDE 如 vs code 很多功能其實挺多餘
+* 喜歡簡潔風，對 IDE 外觀有自己的堅持
+* 覺得某些 IDE（像 VS Code）功能太多，反而干擾專注
 
-在看到同事用鍵盤輕輕敲幾個鍵就可以做到我需要用觸控板點好久才能完成的事，直接就冒起了改個編輯器的心。剛好目前也正在研究分離式鍵盤，如果搭配得宜，我相信可以讓開發工作流更順暢！
+有次看到同事只靠幾個快捷鍵，就完成我得用觸控板點半天的操作，當下就決定：該換編輯器了。
+剛好我也在研究分離式鍵盤，兩者搭配起來，整體開發工作流確實更流暢。
 
-
-
-### 安裝 Neovim
+## 安裝 Neovim
 ```bash
 brew install neovim
 ```
 
-### 檔案結構 
+## 基本檔案結構
 ```text
 ~/.config/nvim
 ├── lua
@@ -35,7 +34,7 @@ brew install neovim
 │   │   ├── options.lua
 │   │   └── styles.lua
 │   ├── plugins
-│   │   ├── lazy.lua -- 官方把這放在 ~/.config/nvim/lua/config，但我更將它視為套件，所以我是放這裡
+│   │   ├── lazy.lua -- 官方範例常放在 ~/.config/nvim/lua/config；我習慣放在 plugins
 │   │   ├── plugin01.lua
 │   │   └── plugin02.lua
 │   └── utility
@@ -44,14 +43,15 @@ brew install neovim
 └── init.lua
 ```
 
-### Options 
+## 設定 Options
 
-`新增 options.lua 檔案，放基本設定的地方`
+建立 `options.lua`，集中管理 Neovim 的基礎行為（縮排、搜尋、行號、剪貼簿等）。
 ```bash
-mkdir ~/.config/nvim/lua/configs/options.lua
+mkdir -p ~/.config/nvim/lua/config
+touch ~/.config/nvim/lua/config/options.lua
 ```
 ```lua
--- ~/.config/nvim/lua/configs/options.lua
+-- ~/.config/nvim/lua/config/options.lua
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
@@ -86,9 +86,9 @@ vim.opt.foldenable = true -- Enable folding
 vim.opt.foldlevel = 99    -- Start with all folds open
 ```
 
-`新增 init.lua 檔案`
+再建立 `lua/init.lua`，統一載入設定模組。
 ```bash
-mkdir ~/.config/nvim/lua/init.lua
+touch ~/.config/nvim/lua/init.lua
 ```
 
 ```lua
@@ -103,6 +103,8 @@ load_files('config', {
   'options',
 })
 ```
+
+完成這一步後，你就有一個乾淨、可擴充的 Neovim 基礎配置。後續要加快捷鍵、主題或插件，直接沿著這個結構往下堆就行。
 
 ---
 

@@ -1,10 +1,10 @@
 +++
-title = "[Neovim] Lazy.vim"
+title = "[Neovim] lazy.nvim"
 date = 2025-12-18T22:27:02+08:00
 author = "Gopal"
 keywords = ["nvim"]
 cover = ""
-summary = "So Lazy Me!"
+summary = "先分清 lazy.nvim 與 LazyVim"
 draft = false
 +++
 
@@ -12,7 +12,7 @@ draft = false
 
 ---
 
-當我們初次向 AI 提問「什麼是 Neovim？」時，很有可能會遇到「Lazy」這個詞彙，但這裡實際上存在兩個容易混淆的概念：
+第一次接觸 Neovim 時，你很容易被「Lazy」這個詞搞混。先把兩個常見名詞拆開：
 
 *   **lazy.nvim**：這是一個強大的 Neovim 插件管理器。
 *   **LazyVim**：這是一個基於 `lazy.nvim` 構建的 Neovim 配置發行版，集成了多種插件與預設配置。
@@ -23,23 +23,27 @@ draft = false
 
 ### 插件管理器 `lazy.nvim` 與配置發行版 `LazyVim`
 
-簡單來說，`lazy.nvim` 賦予你極大的自由，讓你能夠輕鬆地安裝、管理與更新任何你喜歡或由他人開發的 Neovim 插件，打造一個完全符合個人需求與習慣的編輯環境。
+簡單說，`lazy.nvim` 給你的是「自由度」：你可以自己挑插件、自己決定載入時機、自己維護環境。
 
-而 `LazyVim` 則是一個整合好的「發行版」，它預先打包了一整套精選插件、主題與配置，讓你可以快速啟動一個功能完善的 Neovim 環境，省去自行配置的繁瑣過程。對於初學者而言，直接從發行版入手無疑是一個不錯的選擇，我自己最初也是從發行版開始體驗 Neovim 的樂趣。
+`LazyVim` 則是「現成套餐」：幫你打包好插件、主題與預設配置，開箱就能用。  
+如果你剛入門，先從發行版開始完全合理；我自己一開始也是這樣。
 
 ### 回歸編輯器的「初心」
 
-我當初選擇 Neovim 的目的是為了追求極致的定制化和效率，這與使用 VS Code 等功能豐富的 IDE 有著截然不同的體驗。從 VS Code 轉換到 Neovim，有時就像從一個豪華套房搬到一個可以完全由你親手打造的個人工作室。
+我選 Neovim 的核心理由，是追求「可控性」與「效率」。這和使用功能齊全的 IDE（例如 VS Code）是不同路線。  
+從 VS Code 轉到 Neovim，很像從精裝套房搬到可完全自訂的工作室：前期要整理，但後面很順手。
 
-許多時候，你可能會發現 Neovim 的許多強大功能和快捷鍵在日常使用中並不常用，甚至有人會開玩笑說：「直接在 VS Code 裡安裝 Vim 模式可能還更快吧！」[1]
+當然，Neovim 的許多「神級功能」你未必天天用得到。  
+也因此常有人開玩笑說：「那我在 VS Code 裡開 Vim 模式不就好了？」[1]
 
 ---
-### 環境要求 
+### 環境要求
 * Neovim >= 0.8.0
 * Git >= 2.19.0
 
-### 步驟 
-`修改 init.lua 檔案`
+### 安裝步驟
+
+1) 修改 `init.lua` 載入 `lazy`：
 ```lua
 -- ~/.config/nvim/lua/init.lua
 load_files('plugins', {
@@ -47,9 +51,10 @@ load_files('plugins', {
 })
 ```
 
-`新增 lazy.lua 檔案，所有 plugins 都會放這裡`
+2) 新增 `lazy.lua`（後續插件都可放在這裡，或拆分成多個檔案）：
 ```bash
-mkdir ~/.config/nvim/lua/plugins/lazy.lua
+mkdir -p ~/.config/nvim/lua/plugins
+touch ~/.config/nvim/lua/plugins/lazy.lua
 ```
 
 ```lua

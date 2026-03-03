@@ -1,5 +1,5 @@
 +++
-title = "[Neovim] style"
+title = "[Neovim] Style"
 date = 2026-02-25T21:00:00+08:00
 author = "Gopal"
 keywords = ["nvim"]
@@ -14,30 +14,36 @@ draft = false
 
 ![Placeholder Image](/images/nvim-style.gif)
 
-現在我正在使用的據說是 Cursor 所使用的預設主題 [anysphere](https://github.com/dapovich/anysphere.nvim)，目前成為我的心頭好🤍❤️分享給大家
+最近我在用的是 [anysphere](https://github.com/dapovich/anysphere.nvim) 主題（據說也是 Cursor 的預設風格之一）。  
+總之，顏色舒服、對比清楚，寫久了眼睛沒那麼累，就分享給你。
 
-`修改 lazy.lua，使用 Lazy.vim 安裝`
+## 1. 透過 `lazy.nvim` 安裝主題
+
+先修改 `lazy.lua`：
 ```lua
 -- ~/.config/nvim/lua/plugins/lazy.lua
 require("lazy").setup({
+  { "dapovich/anysphere.nvim" }, -- 新增這一行
+}, {
   rocks = {
     enabled = false,
   },
-
-  { "dapovich/anysphere.nvim" }, -- 新增這一行
 })
 ```
 
-`新增 styles.lua 檔案`
+## 2. 新增 `styles.lua`
+
 ```bash
-mkdir ~/.config/nvim/lua/configs/styles.lua
+mkdir -p ~/.config/nvim/lua/config
+touch ~/.config/nvim/lua/config/styles.lua
 ```
 ```lua
--- ~/.config/nvim/lua/configs/styles.lua
+-- ~/.config/nvim/lua/config/styles.lua
 vim.cmd.colorscheme("anysphere")
 ```
 
-`修改 init.lua 檔案`
+## 3. 在 `init.lua` 載入樣式設定
+
 ```lua
 -- ~/.config/nvim/lua/init.lua
 load_files('config', {
@@ -46,16 +52,20 @@ load_files('config', {
 })
 ```
 
-`command`
+## 4. 同步安裝
+
 ```bash
-:Lazy Sync
+:Lazy sync
 ```
 
-其實這整個流程也就是使用 Lazy.vim 套件管理之後的安裝過程，未來有其他套件想要安裝也都是用同一流程即可
+其實整個流程就是 `lazy.nvim` 的標準安裝步驟。  
+未來要加其他插件，流程幾乎完全一樣：加入插件宣告、寫設定檔、在 `init.lua` 載入、最後同步。
 
-在系列文章中，在本文以及之前其實就已經介紹了最基礎的 Neovim 檔案結構跟未來想要擴充套件時的做法。當心裡想要或許可以新增些什麼功能時，上 Github 搜尋大多可以找到。如果找到什麼有趣且實用的 plugins，還請不吝分享~
+到這裡，你已經具備最核心的擴充能力：  
+想加功能時，先去 GitHub 找插件，評估後接進你的配置就行。大多數需求都有人做過輪子了，放心。
 
-不幸的話，可能找不到已開發的 plugin，這時要不放棄，要不可以自己做，之後我會分享一些自己刻出來的小功能。
+如果真的找不到合適插件，也不是世界末日：要嘛調整需求，要嘛自己動手寫。  
+後面我也會分享幾個我自己刻的小功能。
 
 ---
 

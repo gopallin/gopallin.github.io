@@ -14,11 +14,15 @@ draft = false
 
 ![Placeholder Image](/images/nvim-terminal.gif)
 
-是的，你沒有看錯!當我用終端機開啟 Neovim 時，就像 VScode 一樣，我也可以再開一個終端機下指令。有時候要下指令跑測試時，可以一鍵開關終端機真的好好用!
+你沒有看錯，當我在終端機裡開啟 Neovim，也能像 VS Code 一樣，在編輯器內再開一個終端機。
+對我來說，最實用的情境就是「寫到一半立刻跑測試」：不用跳出視窗，一鍵開關就能完成，流暢很多。
 
 ---
 
-`新增函數`
+## 1. 新增 Terminal 功能
+
+先建立檔案：
+
 ```bash
 mkdir ~/.config/nvim/lua/utility/terminal.lua
 ```
@@ -125,7 +129,10 @@ end
 
 ```
 
-`新增快捷鍵`
+## 2. 綁定快捷鍵
+
+建立（或編輯）快捷鍵設定檔：
+
 ```bash
 mkdir ~/.config/nvim/lua/config/keybindings.lua
 ```
@@ -134,10 +141,11 @@ mkdir ~/.config/nvim/lua/config/keybindings.lua
 -- ~/.config/nvim/lua/config/keybindings.lua
 local terminal = require('utility.terminal')
 
-map("n", "t", terminal.open_terminal)
+map("n", "<leader>t", terminal.open_terminal)
 ```
 
-`修改 init.lua 檔案`
+## 3. 在 `init.lua` 載入設定
+
 ```lua
 -- ~/.config/nvim/lua/init.lua
 load_files('config', {
@@ -147,7 +155,8 @@ load_files('config', {
 })
 ```
 
-好了!現在按空白鍵 + t 應該就可以呼叫終端機出現，來試試看吧😆
+完成後，按下 `空白鍵 + t`（也就是 `<leader>t`）就能快速開關終端機。
+如果你常在開發時反覆執行測試，這個工作流會非常順手。
 
 ---
 
