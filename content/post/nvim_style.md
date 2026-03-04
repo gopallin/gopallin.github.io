@@ -17,9 +17,7 @@ draft = false
 最近我在用的是 [anysphere](https://github.com/dapovich/anysphere.nvim) 主題（據說也是 Cursor 的預設風格之一）。  
 總之，顏色舒服、對比清楚，寫久了眼睛沒那麼累，就分享給你。
 
-## 1. 透過 `lazy.nvim` 安裝主題
-
-先修改 `lazy.lua`：
+1. 透過 `lazy.nvim` 安裝主題
 ```lua
 -- ~/.config/nvim/lua/plugins/lazy.lua
 require("lazy").setup({
@@ -31,19 +29,16 @@ require("lazy").setup({
 })
 ```
 
-## 2. 新增 `styles.lua`
-
+2. 新增 `styles.lua`
 ```bash
-mkdir -p ~/.config/nvim/lua/config
-touch ~/.config/nvim/lua/config/styles.lua
+nvim ~/.config/nvim/lua/config/styles.lua
 ```
 ```lua
 -- ~/.config/nvim/lua/config/styles.lua
 vim.cmd.colorscheme("anysphere")
 ```
 
-## 3. 在 `init.lua` 載入樣式設定
-
+3. 在 `init.lua` 載入樣式設定
 ```lua
 -- ~/.config/nvim/lua/init.lua
 load_files('config', {
@@ -52,8 +47,7 @@ load_files('config', {
 })
 ```
 
-## 4. 同步安裝
-
+4. 同步安裝
 ```bash
 :Lazy sync
 ```
@@ -62,7 +56,7 @@ load_files('config', {
 未來要加其他插件，流程幾乎完全一樣：加入插件宣告、寫設定檔、在 `init.lua` 載入、最後同步。
 
 到這裡，你已經具備最核心的擴充能力：  
-想加功能時，先去 GitHub 找插件，評估後接進你的配置就行。大多數需求都有人做過輪子了，放心。
+想加功能時，先去 GitHub 找插件，評估後接進你的配置就行。大多數需求都有人做過輪子了。
 
 如果真的找不到合適插件，也不是世界末日：要嘛調整需求，要嘛自己動手寫。  
 後面我也會分享幾個我自己刻的小功能。

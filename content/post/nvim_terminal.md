@@ -19,12 +19,10 @@ draft = false
 
 ---
 
-## 1. 新增 Terminal 功能
-
-先建立檔案：
-
+1. 新增 Terminal 功能
 ```bash
-mkdir ~/.config/nvim/lua/utility/terminal.lua
+mkdir -p ~/.config/nvim/lua/utility
+nvim ~/.config/nvim/lua/utility/terminal.lua
 ```
 
 ```lua
@@ -129,12 +127,9 @@ end
 
 ```
 
-## 2. 綁定快捷鍵
-
-建立（或編輯）快捷鍵設定檔：
-
+2. 綁定快捷鍵，編輯快捷鍵設定檔
 ```bash
-mkdir ~/.config/nvim/lua/config/keybindings.lua
+nvim ~/.config/nvim/lua/config/keybindings.lua
 ```
 
 ```lua
@@ -144,8 +139,7 @@ local terminal = require('utility.terminal')
 map("n", "<leader>t", terminal.open_terminal)
 ```
 
-## 3. 在 `init.lua` 載入設定
-
+3. 在 `init.lua` 載入設定
 ```lua
 -- ~/.config/nvim/lua/init.lua
 load_files('config', {

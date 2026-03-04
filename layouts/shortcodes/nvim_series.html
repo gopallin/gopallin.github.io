@@ -1,31 +1,21 @@
 {{- $current := .Page.File.Path -}}
+{{- $posts := slice
+  "post/nvim_overview"
+  "post/nvim_lazy"
+  "post/nvim_style"
+  "post/nvim_terminal"
+  "post/nvim_wrap"
+-}}
 <p>系列文章</p>
 <ul>
-  <li>
-    <a href="{{ relref .Page "post/nvim_overview.md" }}">
-      Neovim Overview 首次安裝及設定
-    </a>
-    {{ if eq $current "post/nvim_overview.md" }} &lt;- 現在位置{{ end }}
-  </li>
-  <li>
-    <a href="{{ relref .Page "post/nvim_lazy.md" }}">
-      Neovim Lazy.vim - So Lazy Me!
-    </a>
-    {{ if eq $current "post/nvim_lazy.md" }} &lt;- 現在位置{{ end }}
-  </li>
-  <li>
-    <a href="{{ relref .Page "post/nvim_style.md" }}">
-      Neovim Style - 挑個喜歡的顏色主題!
-    </a>
-    {{ if eq $current "post/nvim_style.md" }} &lt;- 現在位置{{ end }}
-  </li>
-  <li>
-    <a href="{{ relref .Page "post/nvim_terminal.md" }}">
-      Neovim Terminal - 終端機裡的終端機
-    </a>
-    {{ if eq $current "post/nvim_terminal.md" }} &lt;- 現在位置{{ end }}
-  </li>
-  <li>
-      Neovim wrap
-  </li>
+  {{- range $path := $posts -}}
+    {{- with site.GetPage $path -}}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          {{- .Title -}}{{ with .Params.summary }} - {{ . }}{{ end }}
+        </a>
+        {{ if eq $current .File.Path }} &lt;- 現在位置{{ end }}
+      </li>
+    {{- end -}}
+  {{- end -}}
 </ul>

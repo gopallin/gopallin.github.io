@@ -168,3 +168,27 @@ Always read this `GEMINI.md` file thoroughly before initiating any development t
   5.  **Deploy**: The `peaceiris/actions-gh-pages@v3` action deploys the contents of the `public` directory to the `gh-pages` branch, making it live.
       - This step only runs on pushes to the `main` branch.
       - It uses the `GITHUB_TOKEN` secret, which is automatically provided by GitHub Actions.
+
+---
+
+## Shortcode Behavior Notes (2026-03-03)
+
+- File: `layouts/shortcodes/nvim_series.html`
+- Updated behavior:
+  - Series items are no longer hardcoded text labels.
+  - Each item now resolves the target page with `site.GetPage` and renders:
+    - `Title`
+    - `Summary` (when available)
+  - Current page marker remains based on `.Page.File.Path`.
+- Post list currently includes:
+  - `post/nvim_overview`
+  - `post/nvim_lazy`
+  - `post/nvim_style`
+  - `post/nvim_terminal`
+  - `post/nvim_wrap`
+
+## Update 2026-03-03 (nvim_series shortcode)
+- `layouts/shortcodes/nvim_series.html` now renders each item from target post front matter.
+- Display format: `<Title> - <Summary>` (summary only when available).
+- Uses `site.GetPage` + `.RelPermalink` and keeps current-page marker via `.File.Path`.
+- nvim_series shortcode note: use `.Params.summary` instead of `.Summary` to avoid recursive summary rendering when posts include the same shortcode.

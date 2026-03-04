@@ -1,14 +1,16 @@
 +++
-title = "Neovim"
+title = "[Neovim] basic settings"
 date = 2025-12-10T22:11:02+08:00
 author = "Gopal"
 keywords = ["nvim"]
 cover = ""
-summary = "What's your IDE? Have you tried Neovim?"
+summary = "安裝及基礎設定"
 draft = false
 +++
 
 {{< nvim_series >}}
+
+---
 
 ## 為什麼是 Neovim？
 
@@ -45,11 +47,12 @@ brew install neovim
 
 ## 設定 Options
 
-建立 `options.lua`，集中管理 Neovim 的基礎行為（縮排、搜尋、行號、剪貼簿等）。
+1. 建立 `options.lua`，集中管理 Neovim 的基礎行為（縮排、搜尋、行號、剪貼簿等）。
 ```bash
 mkdir -p ~/.config/nvim/lua/config
-touch ~/.config/nvim/lua/config/options.lua
+nvim ~/.config/nvim/lua/config/options.lua
 ```
+
 ```lua
 -- ~/.config/nvim/lua/config/options.lua
 vim.g.mapleader = " "
@@ -86,9 +89,9 @@ vim.opt.foldenable = true -- Enable folding
 vim.opt.foldlevel = 99    -- Start with all folds open
 ```
 
-再建立 `lua/init.lua`，統一載入設定模組。
+2. 再建立 `lua/init.lua`，統一載入設定模組。
 ```bash
-touch ~/.config/nvim/lua/init.lua
+nvim ~/.config/nvim/lua/init.lua
 ```
 
 ```lua

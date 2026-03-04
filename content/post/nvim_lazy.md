@@ -54,7 +54,7 @@ load_files('plugins', {
 2) 新增 `lazy.lua`（後續插件都可放在這裡，或拆分成多個檔案）：
 ```bash
 mkdir -p ~/.config/nvim/lua/plugins
-touch ~/.config/nvim/lua/plugins/lazy.lua
+nvim ~/.config/nvim/lua/plugins/lazy.lua
 ```
 
 ```lua
