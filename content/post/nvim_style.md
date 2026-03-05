@@ -2,7 +2,7 @@
 title = "[Neovim] Style"
 date = 2026-02-25T21:00:00+08:00
 author = "Gopal"
-keywords = ["nvim"]
+tags = ["nvim"]
 cover = ""
 summary = "挑個喜歡的顏色主題!"
 draft = false

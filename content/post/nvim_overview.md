@@ -2,7 +2,7 @@
 title = "[Neovim] basic settings"
 date = 2025-12-10T22:11:02+08:00
 author = "Gopal"
-keywords = ["nvim"]
+tags = ["nvim"]
 cover = ""
 summary = "安裝及基礎設定"
 draft = false

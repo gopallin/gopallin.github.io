@@ -2,7 +2,7 @@
 title = "[Neovim] lazy.nvim"
 date = 2025-12-18T22:27:02+08:00
 author = "Gopal"
-keywords = ["nvim"]
+tags = ["nvim"]
 cover = ""
 summary = "先分清 lazy.nvim 與 LazyVim"
 draft = false

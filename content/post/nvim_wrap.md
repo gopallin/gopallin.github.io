@@ -2,7 +2,7 @@
 title = "[Neovim] Wrap"
 date = 2026-03-03T21:00:00+08:00
 author = "Gopal"
-keywords = ["nvim"]
+tags = ["nvim"]
 cover = ""
 summary = "一鍵包覆"
 draft = false

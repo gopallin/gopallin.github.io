@@ -2,7 +2,7 @@
 title = "AWS Certified AI Practitioner 備考"
 date = 2025-12-30T12:31:46+08:00
 author = "Gopal"
-keywords = ["aws"]
+tags = ["AI", "AWS"]
 cover = ""
 summary = "分享 AWS Certified AI Practitioner 的備考方法與學習心得。"
 draft = false

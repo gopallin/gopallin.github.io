@@ -2,7 +2,7 @@
 title = "[Neovim] Terminal"
 date = 2025-12-18T22:27:02+08:00
 author = "Gopal"
-keywords = ["nvim"]
+tags = ["nvim"]
 cover = ""
 summary = "終端機裡的終端機"
 draft = false
