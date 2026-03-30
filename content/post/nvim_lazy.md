@@ -5,6 +5,7 @@ author = "Gopal"
 tags = ["nvim"]
 cover = ""
 summary = "先分清 lazy.nvim 與 LazyVim"
+weight = 2
 draft = false
 +++
 

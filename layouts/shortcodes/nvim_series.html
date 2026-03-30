@@ -1,7 +1,8 @@
 {{- $current := .Page.File.Path -}}
+{{- $section := site.GetPage "post" -}}
 <p>系列文章</p>
 <ul>
-  {{- range where site.RegularPages "Section" "post" -}}
+  {{- range $section.Pages.ByWeight -}}
     {{- if strings.HasPrefix .File.Path "post/nvim_" -}}
       <li>
         <a href="{{ .RelPermalink }}">

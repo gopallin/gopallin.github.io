@@ -5,6 +5,7 @@ author = "Gopal"
 tags = ["nvim"]
 cover = ""
 summary = "終端機裡的終端機"
+weight = 4
 draft = false
 +++
 

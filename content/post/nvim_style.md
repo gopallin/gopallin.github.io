@@ -5,6 +5,7 @@ author = "Gopal"
 tags = ["nvim"]
 cover = ""
 summary = "挑個喜歡的顏色主題!"
+weight = 3
 draft = false
 +++
 

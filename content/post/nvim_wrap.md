@@ -5,6 +5,7 @@ author = "Gopal"
 tags = ["nvim"]
 cover = ""
 summary = "一鍵包覆"
+weight = 5
 draft = false
 +++
 

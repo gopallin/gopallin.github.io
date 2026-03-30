@@ -5,6 +5,7 @@ author = "Gopal"
 tags = ["nvim"]
 cover = ""
 summary = "安裝及基礎設定"
+weight = 1
 draft = false
 +++
 
