@@ -15,6 +15,7 @@ Skills
 *   Flutter / Dart
 *   Docker
 *   n8n
+*   龍蝦飼養員 
 
 Repo
 ---

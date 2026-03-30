@@ -1,15 +1,8 @@
 {{- $current := .Page.File.Path -}}
-{{- $posts := slice
-  "post/nvim_overview"
-  "post/nvim_lazy"
-  "post/nvim_style"
-  "post/nvim_terminal"
-  "post/nvim_wrap"
--}}
 <p>系列文章</p>
 <ul>
-  {{- range $path := $posts -}}
-    {{- with site.GetPage $path -}}
+  {{- range where site.RegularPages "Section" "post" -}}
+    {{- if strings.HasPrefix .File.Path "post/nvim_" -}}
       <li>
         <a href="{{ .RelPermalink }}">
           {{- .Title -}}{{ with .Params.summary }} - {{ . }}{{ end }}
