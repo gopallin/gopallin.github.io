@@ -4,7 +4,7 @@ date = 2026-03-03T21:00:00+08:00
 author = "Gopal"
 tags = ["nvim"]
 cover = ""
-summary = "一鍵包覆"
+summary = "一鍵包覆🎁"
 weight = 5
 draft = false
 +++

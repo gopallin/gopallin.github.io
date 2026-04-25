@@ -1,0 +1,39 @@
+{{- $current := .Page.File.Path -}}
+<p>系列文章</p>
+<ul>
+  {{- range where site.RegularPages "Section" "post" -}}
+    {{- if strings.HasPrefix .File.Path "post/keyboard_" -}}
+      <li>
+        <a href="{{ .RelPermalink }}">
+          {{- .Title -}}{{ with .Params.summary }} - {{ . }}{{ end }}
+        </a>
+        {{ if eq $current .File.Path }} &lt;- 現在位置{{ end }}
+      </li>
+    {{- end -}}
+  {{- end -}}
+</ul>
+<ul>
+  <li>
+    銲接🧑🏼‍🏭
+  </li>
+</ul>
+<ul>
+  <li>
+    鍵盤佈局 
+  </li>
+</ul>
+<ul>
+  <li>
+    ZQK 燒錄
+  </li>
+</ul>
+<ul>
+  <li>
+    怎麼有顆鍵沒有反應🫠 
+  </li>
+</ul>
+<ul>
+  <li>
+    我的下一步 
+  </li>
+</ul>

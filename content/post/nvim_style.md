@@ -4,7 +4,7 @@ date = 2026-02-25T21:00:00+08:00
 author = "Gopal"
 tags = ["nvim"]
 cover = ""
-summary = "挑個喜歡的顏色主題!"
+summary = "挑個喜歡的顏色主題!🌈"
 weight = 3
 draft = false
 +++
