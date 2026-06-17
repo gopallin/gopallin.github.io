@@ -35,3 +35,7 @@ draft = false
 > **注意：** zip 上的檔案是單片的，數量一定要填**雙數**（因為是分離式鍵盤，需要左右各一片）
 
 ![keyboard-pcb](/images/keyboard-pcb.gif)
+
+### 3. 收到 PCB 🎉
+
+![keyboard-pcb](/images/keyboard-pcb.png)
