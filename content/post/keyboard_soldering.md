@@ -16,5 +16,15 @@ draft = false
 在這一個步驟，我們手上應該要有所有硬體的材料了~接下來就是要如[影片](https://www.youtube.com/watch?v=pvvNYPsMyz4)所示，一步步銲接
 
 ![keyboard-pcb](/images/keyboard-soldering-1.png)
+
+這邊我推薦的的銲接順序是
+
+1.  二極體
+2.  熱插拔軸座底座
+3.  TRRS 轉接頭
+4.  ProMicro
+
+最終的成品就會像下面這樣了~~
+
 ![keyboard-pcb](/images/keyboard-soldering-2.png)
 
