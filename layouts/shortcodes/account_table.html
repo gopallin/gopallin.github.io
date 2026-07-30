@@ -3,6 +3,19 @@
   border-top: 4px double #d40000 !important;
 }
 </style>
+{{- $definitions := findRE `(?m)^\[\^[0-9]+\]:[^\n]*` .Inner -}}
+{{- $table := replaceRE `(?m)^\[\^[0-9]+\]:[^\n]*(\n|$)` "" .Inner -}}
+{{- $table = $table | markdownify -}}
+{{- $table = replaceRE `\[\^([0-9]+)\]` `<sup id="fnref:$1"><a href="#fn:$1" role="doc-noteref">$1</a></sup>` $table -}}
 <div class="account-table">
-{{ .Inner | markdownify }}
+{{ $table | safeHTML }}
 </div>
+{{ with $definitions }}
+<div class="footnotes" role="doc-endnotes"><hr><ol>
+{{ range . }}
+  {{- $id := replaceRE `^\[\^([0-9]+)\]:.*$` "$1" . -}}
+  {{- $text := replaceRE `^\[\^[0-9]+\]:\s*` "" . -}}
+  <li id="fn:{{ $id }}">{{ $text }} <a href="#fnref:{{ $id }}" role="doc-backlink">↩︎</a></li>
+{{ end }}
+</ol></div>
+{{ end }}
