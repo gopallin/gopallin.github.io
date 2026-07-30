@@ -65,6 +65,10 @@
   }
 </style>
 
+<!-- Code block controls -->
+<link rel="stylesheet" href='{{ "css/code-blocks.css" | absURL }}' />
+<script defer src='{{ "js/code-blocks.js" | absURL }}'></script>
+
 <!-- Google Analytics -->
 {{ if eq (getenv "HUGO_ENV") "production"}}
 {{ template "_internal/google_analytics.html" . }}
