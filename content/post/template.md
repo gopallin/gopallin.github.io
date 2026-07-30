@@ -59,10 +59,30 @@ func main() {
 }
 ```
 
-## Blockquotes
+## Blockquotes & Callouts
 
-> This is a blockquote.
-> It's great for highlighting important text.
+> This is a standard blockquote.
+
+> 💡 **Note:** This is a note callout.
+
+> 📌 **Tip:** This is a tip callout.
+
+> ⚠️ **Warning:** This is a warning callout.
+
+## Footnotes
+
+Here is a sentence with a footnote reference[^1]. You can also add another footnote[^2].
+
+[^1]: This is the first footnote detail.
+[^2]: This is the second footnote detail.
+
+## Collapsible Details
+
+<details>
+  <summary>Click to expand additional notes</summary>
+
+  Here are extra details or longer reference materials that you want to hide by default.
+</details>
 
 ## Images
 
