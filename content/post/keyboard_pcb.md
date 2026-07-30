@@ -18,7 +18,7 @@ draft = false
 1.  不是直列鍵盤，對剛接觸分離式鍵盤的我來說上手應該不會太困難
 2.  因為我中打使用嘸蝦米，可以不用考慮數字鍵，這板子剛好鍵數適中，尺寸討喜
 3.  不用 3D 列印外殼
-4.  最重要的是 youtube 上直接有[教程](https://www.youtube.com/watch?v=pvvNYPsMyz4)，照著做就可以了😤
+4.  最重要的是 youtube 上有[教學](https://www.youtube.com/watch?v=pvvNYPsMyz4)，直接照著做就可以了😤
 
 ![keyboard-pcb](/images/keyboard-pcb.png)
 

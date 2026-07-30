@@ -75,6 +75,7 @@ Here is a sentence with a footnote reference[^1]. You can also add another footn
 
 [^1]: This is the first footnote detail.
 [^2]: This is the second footnote detail.
+[^3]: This is the third footnote detail.
 
 ## Collapsible Details
 
@@ -94,10 +95,7 @@ Here's an example of a Markdown table:
 
 | Header 1 | Header 2 | Header 3 |
 | :------- | :------: | -------: |
-| Row 1 Col 1 | Row 1 Col 2 | Row 1 Col 3 |
+| Row 1 Col 1 [^3]| Row 1 Col 2 | Row 1 Col 3 |
 | Row 2 Col 1 | Row 2 Col 2 | Row 2 Col 3 |
 | Row 3 Col 1 | Row 3 Col 2 | Row 3 Col 3 |
 
----
-
-my default template!
