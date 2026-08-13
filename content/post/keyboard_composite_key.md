@@ -26,9 +26,9 @@ draft = false
 當我有了做鍵盤的想法後，一直苦於沒能找到 Mac 巧控板的替代品，巧控板帶來直覺操控感真的無可取代，但用了分離式鍵盤後我的雙手又離巧控板太遠不好操作。
 
 
-這時候我找到這隻小貓 [shortcat](https://shortcat.app/) ![keyboard-pcb](/images/keyboard-composite-key-2.png "40px") 其功能能讓我單單使用鍵盤就能快速定位到畫面上的各個連結或按鈕
+這時候我找到這隻小貓 [shortcat](https://shortcat.app/) ![keyboard-pcb](/images/keyboard-composite-key-1.png "40px") 其功能能讓我單單使用鍵盤就能快速定位到畫面上的各個連結或按鈕
 
-![keyboard-pcb](/images/keyboard-composite-key-1.gif)
+![keyboard-pcb](/images/keyboard-composite-key-0.gif)
 
 曾經一位 senior 跟我說過：
 
@@ -36,11 +36,11 @@ draft = false
 
 可以一勞永逸的事實在是沒有不做的道理。乾脆把召喚 shortcat 的三個鍵 (shift, cmd, space) 做成一個複合鍵好了！而下張圖的紅框處就是我的複合鍵位置。步驟如下：
 
-![keyboard-pcb](/images/keyboard-composite-key-1.png)
+![keyboard-pcb](/images/keyboard-composite-key-0.png)
 
 1. 先在 [QMK](https://config.qmk.fm/#/bluebell/swoop/LAYOUT_split_3x5_3) 把鍵位序列好，而我們要的複合鍵就隨便用一個鍵代替，如：KC_F3
 
-![keyboard-pcb](/images/keyboard-composite-key-5.png)
+![keyboard-pcb](/images/keyboard-composite-key-2.png)
 
 2.  按下 download 的 icon，下載 .json
 

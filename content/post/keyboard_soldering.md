@@ -15,7 +15,7 @@ draft = false
 
 在這一個步驟，我們手上應該要有所有硬體的材料了~接下來就是要如[影片](https://www.youtube.com/watch?v=pvvNYPsMyz4)所示，一步步銲接
 
-![keyboard-pcb](/images/keyboard-soldering-1.png)
+![keyboard-pcb](/images/keyboard-soldering-0.png)
 
 這邊我推薦的的銲接順序是
 
@@ -26,5 +26,5 @@ draft = false
 
 最終的成品就會像下面這樣了~~
 
-![keyboard-pcb](/images/keyboard-soldering-2.png)
+![keyboard-pcb](/images/keyboard-soldering-1.png)
 

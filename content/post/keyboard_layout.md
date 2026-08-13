@@ -13,7 +13,7 @@ draft = false
 
 ---
 
-![keyboard-pcb](/images/keyboard-layout-1.png)
+![keyboard-pcb](/images/keyboard-layout-0.png)
 
 如果大家仔細看這張照片的紅框處，可以發現少了個 micro USB 連接器！全都是因為我測試時頻繁的插拔不小心掰斷的。剛好斷的那顆又是我預計要寫入的主控板，隨之而來的後果就是我需要把所有鍵位都設成鏡像。
 
@@ -39,10 +39,10 @@ https://config.qmk.fm/#/bluebell/swoop/LAYOUT_split_3x5_3)
 | **`TT(n)`** | Tap-Toggle | 按住 = 暫時啟用 (`MO`)；連續點按 5 次 = 鎖定切換 (`TG`) | **一鍵兩用**：輸入單一符號時按住即可；若需要寫數十行 SQL 或輸入整排數字，連點 5 次鎖定在數字層，輸完再點一下解鎖。 |
 | **`LT(n, kc)`** | Layer Tap | 按住 = 啟用第 n 層；輕點 = 送出 `kc` 這個鍵 | **36 鍵省鍵位神器**：將拇指鍵設為 `LT(1, KC_SPC)`，輕點是「空格 Space」，按住不放則瞬間變成「Layer 1 切換鍵」。 |
 
+![keyboard-pcb](/images/keyboard-layout-1.png)
+
+
 ![keyboard-pcb](/images/keyboard-layout-2.png)
-
-
-![keyboard-pcb](/images/keyboard-layout-3.png)
 
 
 > **🤖 AI 補充說明：為什麼接頭斷了，鍵位就要變鏡像？**
